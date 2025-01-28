@@ -1,9 +1,14 @@
-// components/MedicationCard.tsx
+// src/components/MedicationCard.tsx
 import { Card } from 'react-bootstrap';
-import styles from './MedicationCard.module.css';
+import { Medication } from '../utils/types';
+import './MedicationCard.css';
 
-const MedicationCard = ({ medication }) => (
-  <Card className={`mb-3 ${styles.medicationCard}`}>
+interface MedicationCardProps {
+  medication: Medication;
+}
+
+const MedicationCard: React.FC<MedicationCardProps> = ({ medication }) => (
+  <Card className="mb-3 medicationCard">
     <Card.Body>
       <Card.Title>{medication.name}</Card.Title>
       <Card.Text>
@@ -11,7 +16,7 @@ const MedicationCard = ({ medication }) => (
         {/* Adicione mais informações conforme necessário */}
       </Card.Text>
     </Card.Body>
-  </Card>   
+  </Card>
 );
 
 export default MedicationCard;

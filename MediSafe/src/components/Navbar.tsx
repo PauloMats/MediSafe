@@ -1,8 +1,9 @@
-// components/Navbar.tsx
+// src/components/Navbar.tsx
 import { Navbar, Nav } from 'react-bootstrap';
 import Link from 'next/link';
+import { FC } from 'react';
 
-const MyNavbar = () => (
+const MyNavbar: FC = () => (
   <Navbar bg="light" expand="lg">
     <Navbar.Brand href="/">MediSafe</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -1,16 +1,37 @@
-// app/about/page.tsx
-import styles from './about.module.css';
+// src/app/page.tsx
+"use client";
 
-export default function About() {
+import { useEffect, useState } from 'react';
+import MyNavbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import MedicationCard from '../components/MedicationCard';
+import { getMedications } from '../utils/medicationData';
+import { Medication } from '../utils/types';
+import './home.css';
+
+const Home: React.FC = () => {
+  const [medications, setMedications] = useState<Medication[]>([]);
+
+  useEffect(() => {
+    getMedications().then(data => setMedications(data));
+  }, []);
+
   return (
-    <div className={styles.container}>
-      <h1>Sobre o MediSafe</h1>
-      <p>
-        MediSafe é uma ferramenta para auxiliar médicos e enfermeiros no cálculo de doses de medicamentos para crianças, com base em peso, idade, altura e outros fatores.
-      </p>
-      <p>
-        Nosso objetivo é permitir que os profissionais de saúde tenham mais eficiência em seu trabalho e mais tempo para o cuidado com os pacientes.
-      </p>
+    <div className="page">
+      <MyNavbar />
+      <main className="container mt-4">
+        <h1>Bem-vindo ao MediSafe</h1>
+        <div className="row">
+          {medications.map((medication, index) => (
+            <div className="col-md-4" key={index}>
+              <MedicationCard medication={medication} />
+            </div>
+          ))}
+        </div>
+      </main>
+      <Footer />
     </div>
   );
-}
+};
+
+export default Home;
