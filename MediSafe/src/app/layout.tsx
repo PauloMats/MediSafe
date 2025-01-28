@@ -11,7 +11,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="pt-BR">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <title>MediSafe - Cálculos Precisos</title>
+        <title>MediHelp - Cálculo de Medicações</title>
       </head>
       <body>
         <main>{children}</main>
