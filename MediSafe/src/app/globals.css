@@ -1,6 +1,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-color: #00aaff; /* Azul claro */
+  --secondary-color: #00cc88; /* Verde claro */
+  --text-color: #333333;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,7 +20,7 @@ body {
 }
 
 body {
-  color: var(--foreground);
+  color: var(--text-color);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
