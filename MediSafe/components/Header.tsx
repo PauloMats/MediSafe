@@ -4,6 +4,7 @@ import Image from 'next/image';
 import './styles/header.css';
 
 const Header = () => (
+    
   <header className="header">
     <div className="header-top">
       <div className="logo">
