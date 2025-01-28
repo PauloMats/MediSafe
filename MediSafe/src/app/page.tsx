@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import MyNavbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import MedicationCard from '../components/MedicationCard';
-import { getMedications } from '../utils/medicationData';
+import { getMedications } from '../utils/api-medicationData';
 import { Medication } from '../utils/types';
 import './home.css';
 
