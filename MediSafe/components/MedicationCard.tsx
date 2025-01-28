@@ -1,7 +1,7 @@
 // src/components/MedicationCard.tsx
 import { Card } from 'react-bootstrap';
 import { Medication } from '../utils/types';
-import './MedicationCard.css';
+import './styles/MedicationCard.css';
 
 interface MedicationCardProps {
   medication: Medication;
